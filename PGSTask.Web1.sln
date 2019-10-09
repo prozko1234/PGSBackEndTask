@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PGSTask.Web1", "PGSTask.Web1\PGSTask.Web1.csproj", "{7CC27BA9-495D-442E-B01F-411AE5B614ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CC27BA9-495D-442E-B01F-411AE5B614ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CC27BA9-495D-442E-B01F-411AE5B614ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CC27BA9-495D-442E-B01F-411AE5B614ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CC27BA9-495D-442E-B01F-411AE5B614ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {95928EA6-970F-434B-A62A-E725D75D1757}
+	EndGlobalSection
+EndGlobal
