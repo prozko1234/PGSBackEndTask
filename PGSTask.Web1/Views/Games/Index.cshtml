@@ -1,0 +1,75 @@
+﻿@model PGSTask.Web1.Models.GamesViewModel
+
+@{
+     Layout = "_Layout";
+    ViewData["Title"] = "Index";
+}
+
+<h2>Games</h2>
+<div>
+    <button>
+
+    </button>
+</div>
+
+<form asp-controller="Games" asp-action="Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            <a asp-action="Index">Back to Full List</a>
+        </p>
+    </div>
+</form>
+<table id="indexAdm" class="table display">
+    <thead>
+        <tr>
+            <th>
+                <a asp-action="Index">Title</a>
+            </th>
+            <th>
+                <a asp-action="Index">Release Date</a>
+            </th>
+            <th>
+                <a asp-action="Index">Genre</a>
+            </th>
+            <th>
+                <a asp-action="Index">Platform</a>
+            </th>
+            <th>
+                Developer
+            </th>
+            <th>
+                Price
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Games)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReleaseDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Platform)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Developer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    <a data-id="@item.Id">Edit</a> |
+                    <a data-id="@item.Id">Delete</a> |
+                    <a data-id="@item.Id">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
