@@ -12,9 +12,9 @@ namespace PGSTask.Web1.Data
 
         void UpdateGame(Game game);
 
-        void DeleteGame(int? id);
+        void DeleteGame(int id);
 
-        Game GetGame(int id);
+        Game GetGame(int? id);
 
         List<Game> GetAllGames();
     }

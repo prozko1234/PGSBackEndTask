@@ -18,7 +18,10 @@ namespace PGSTask.Web1.Controllers
         {
             _gameRepository = gameRepository;
         }
-
+        /// <summary>
+        /// Opens Home view
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult Index()
         {

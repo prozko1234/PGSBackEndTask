@@ -11,6 +11,7 @@ namespace PGSTask.Web1.Models
 /// </summary>
     public class Game
     {
+        [Key]
         public int Id { get; set; }
 
         [Required]

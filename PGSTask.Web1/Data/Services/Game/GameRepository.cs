@@ -27,9 +27,9 @@ namespace PGSTask.Web1.Data
         /// Deleting game entity from database
         /// </summary>
         /// <param name="id"></param>
-        public void DeleteGame(int? id)
+        public void DeleteGame(int id)
         {
-            if(id != null)
+            if (id != null)
             {
                 var entity = _repositoryContext.Games.SingleOrDefault(x => id == x.Id);
                 _repositoryContext.Remove(entity);
@@ -49,7 +49,7 @@ namespace PGSTask.Web1.Data
         /// </summary>
         /// <param name="id">Game's id to get </param>
         /// <returns></returns>
-        public Game GetGame(int id)
+        public Game GetGame(int? id)
         {
             var entity = _repositoryContext.Games.SingleOrDefault(x => id == x.Id);
             return entity;

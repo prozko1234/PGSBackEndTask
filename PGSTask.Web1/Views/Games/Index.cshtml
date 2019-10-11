@@ -1,44 +1,42 @@
 ﻿@model PGSTask.Web1.Models.GamesViewModel
 
 @{
-     Layout = "_Layout";
+    Layout = "_Layout";
     ViewData["Title"] = "Index";
 }
 
 <h2>Games</h2>
-<div>
-    <button>
-
-    </button>
+<div class="form-actions no-color">
+    <p>
+        <a asp-action="Create">Click to add game</a>
+    </p>
 </div>
 
 <form asp-controller="Games" asp-action="Index" method="get">
-    <div class="form-actions no-color">
-        <p>
-            <a asp-action="Index">Back to Full List</a>
-        </p>
-    </div>
 </form>
-<table id="indexAdm" class="table display">
+<table id="gamesTable" class="display table" style="width:100%">
     <thead>
         <tr>
             <th>
-                <a asp-action="Index">Title</a>
+                Title
             </th>
             <th>
-                <a asp-action="Index">Release Date</a>
+                Release Date
             </th>
             <th>
-                <a asp-action="Index">Genre</a>
+                Genre
             </th>
             <th>
-                <a asp-action="Index">Platform</a>
+                Platform
             </th>
             <th>
                 Developer
             </th>
             <th>
                 Price
+            </th>
+            <th>
+                Actions
             </th>
         </tr>
     </thead>
@@ -65,11 +63,18 @@
                     @Html.DisplayFor(modelItem => item.Price)
                 </td>
                 <td>
-                    <a data-id="@item.Id">Edit</a> |
-                    <a data-id="@item.Id">Delete</a> |
-                    <a data-id="@item.Id">Details</a>
+                    <form asp-action="Delete" method="get" asp-route-id="@item.Id">
+                        <a asp-action="Edit" asp-controller="Games" asp-route-id="@item.Id" class="btn" btn-primary>Edit</a>
+                        <button type="submit" class="btn btn-danger"> Delete</button>
+                    </form>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+@section scripts {
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="~/js/Games/Index.js"></script>
+}
+
